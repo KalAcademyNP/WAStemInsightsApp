@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<body>
+    <div style="margin-top:30px; margin-left:100px; margin-bottom:50px; min-height:200px">
+        <div id="searchInputs">
+            <div id="jobCategoryDropdown" class="dropdown">
+                <text class="searchLabel">Job Category<br></text>
+                <div>
+                    <select id="titlesUl" class="form-control">
+                        <option value="">ALL</option>
+                    </select>
+                </div>
+                </div>
+                <div id="titleDropdown" class="dropdown">
+                    <text class="searchLabel">Title<br></text>
+                    <div>
+                        <select id="titlesUl" class="form-control">
+                            <option value="">ALL</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="levelDropdown" class="dropdown">
+                    <text class="searchLabel">Educational Level<br></text>
+                    <div>
+                        <select id="levelsUl" class="form-control">
+                            <option value="">ALL</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="regionDropdown" class="dropdown">
+                    <text class="searchLabel">Region<br></text>
+                    <div>
+                        <select id="regionUl" class="form-control">
+                            <option value="WA">ALL</option>
+                            <option value="SPOK">SPOKANE</option>
+                            <option value="YAK">YAKIMA</option>
+                            <option value="VANC">VANCOUVER</option>
+                            <option value="KING">KING</option>
+                            <option value="SNO">SNOHOMISH</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="search" class="dropdown">
+                    <button id="searchBtn" class="btn btn-success">Search</button>
+                    <img id="spinner" src="~/Content/images/spinner.gif" style="width:30px; height:30px" />
+                </div>
+            </div>
+
+        <div id="searchResults" class="results">        
+        </div>
+    </div>
+
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/utilities.js"></script>
+        <script src="~/Scripts/home.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                init();
+            });
+        </script>
+</body>
+
+
+

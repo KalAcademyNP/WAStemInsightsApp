@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+   
+    <div class="main-header">
+         
+        <div style="display:inline-block;float:left;width:70%">   
+           <nav class="navbar  navbar-default">
+           
+                <div class="navbar-header">
+                    <a href="http://www.washingtonstem.org/" border="0">
+                        <img src="~/Content/images/logo-STEM.png" />
+                    </a>
+                </div>
+               
+               <div style="padding-top:25px;padding-left:245px">
+
+                   <ul class="nav navbar-nav">
+                       <li><a class="top-link"href="#">Home</a></li>
+                       <li><a class="top-link" href="http://www.washingtonstem.org/Resource-Hub/">Resource Hub</a></li>
+                       <li><a class="top-link" href="http://www.washingtonstem.org/News-and-Media/">News+Media</a></li>
+                       <li><a class="top-link" href="http://blog.washingtonstem.org/">Blog</a></li>
+                       <li><a class="top-link" href="http://www.washingtonstem.org/Contact/">Contact</a></li>
+                       <li><a class="top-link" href="http://www.washingtonstem.org/Get-Involved/">Join Us</a></li>
+                   </ul>
+               </div>
+            </nav>
+        </div>
+ 
+        <div style="position:relative; top:0; padding-right:80px; float:right;">
+                <a href="#">
+                    <img src="~/Content/images/CareerInsight_Badge.png" border="0" style="width:130px; height:130px" />
+                </a> 
+        </div>
+    </div>
+
+    <div class="search-links">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Search STEM Career", "Index", "Home")</li>
+            <li>@Html.ActionLink("Check Career Trend", "StemInsights", "Home")</li>
+        </ul>
+    </div>
+
+    <div class="container body-content" style="position:relative; background-color:white; top:20px">
+        @RenderBody()
+    </div>
+
+
+    <div class="seattle">
+        <img src="~/Content/images/seattle.png" width="100%" />
+    </div>
+    
+     <div class="footer">
+        <div style="float:left;padding-left:20px;">
+            <ul class="nav navbar-nav">
+               
+                <li class="active"><a class="bottom-link" href="http://www.washingtonstem.org/">@DateTime.Now.Year - Washington STEAM</a></li>
+                    
+                
+            </ul>
+        </div> 
+        <div style="float:right;padding-right:50px;">
+             <ul class="nav navbar-nav">
+                 <li class="active"><a class="bottom-link" href="http://www.washingtonstem.org/">Home</a></li>
+                 <li><a class="bottom-link" href="http://www.washingtonstem.org//Contact/">Contact</a></li>
+                 <li><a class="bottom-link" href="http://www.washingtonstem.org//Jobs/">Jobs</a></li>
+                 <li><a class="bottom-link" href="http://www.washingtonstem.org//Terms-of-Use/">Terms of Use</a></li>
+             </ul>
+         </div>
+    </div>
+          
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @Styles.Render("~/Content/css")
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/utilities.js"></script>
+    <script src="~/Scripts/home.js"></script>
+
+
+</body>
+</html>
