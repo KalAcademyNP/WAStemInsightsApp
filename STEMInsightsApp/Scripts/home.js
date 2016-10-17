@@ -38,8 +38,10 @@ function renderResults(arr) {
     
     var result = "<span style='font-size:9pt;color:#000000'>We found " + arr.length + " records!</span><br>";
     if (arr.length > 0) {
+ 
         result += '<table class="table table-striped" style="font-size:8pt;color:#000000;" width="100%"><tr style="font-weight:bold;"><td>'
-                             + 'Occupational Title</td><td>'
+                             + 'Job Category</td><td>'
+                             + 'Job Title</td><td>'
                              + 'Annual Median Salary($)</td><td>'
                              + 'Median Hourly Wage($)</td><td>'
                              + 'Entry Education Level</td><td>'
@@ -62,6 +64,7 @@ function renderResults(arr) {
         }    
 
         result += '<tr><td>'
+                             + data.JobTitle + '</td><td>'
                              + data.OccupationalTitle + '</td><td>'
                              + data.AnnualMedianSalary + '</td><td>'
                              + data.MedianHourlyWage + '</td><td>'
