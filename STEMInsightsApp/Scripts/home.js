@@ -40,16 +40,16 @@ function renderResults(arr) {
     if (arr.length > 0) {
   
         result += '<table class="table table-striped" style="font-size:8pt;color:#000000;" width="100%"><tr style="font-weight:bold;"><td>'
-                             + 'Job Category</td><td>'
-                             + 'Job Title</td><td>'
-                             + 'Annual Median Salary($)</td><td>'
-                             + 'Median Hourly Wage($)</td><td>'
-                             + 'Entry Education Level</td><td>'
-                             + 'Total Jobs Added</td><td>'
-                             + 'Average Annual Growth Rate(%)</td><td>'
-                             + 'Average Annual Job Openings</td><td>'
-                             + 'Estimated Employment 2014</td><td>'
-                             + 'Estimated Employment 2024</td>'
+                             + 'Job Category <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Job Title <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Annual Median Salary($) <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Median Hourly Wage($) <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Entry Education Level <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Total Jobs Added <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Average Annual Growth Rate(%) <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Average Annual Job Openings <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Estimated Employment 2014 <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Estimated Employment 2024 <span class="glyphicon glyphicon-question-sign"></span></td>'
                              + '</tr>';
     }
 
@@ -64,7 +64,7 @@ function renderResults(arr) {
         }
 
         result += '<tr><td>'
-            console.log("DATA", "%", Object.keys(data))
+            //console.log("DATA", "%", Object.keys(data))
                              + data.JobTitle + '</td><td>'
                              + data.OccupationalTitle + '</td><td>'
                              + data.AnnualMedianSalary + '</td><td>'
