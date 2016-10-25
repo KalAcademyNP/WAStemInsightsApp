@@ -3,6 +3,105 @@
 }
 
 <body>
+    <!--MODALS-->
+    <!-- Small modal -->
+    <div class="modal fade bs-soc-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="soc-modal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">SOC Codes (US Bureau of Labor Statistics)</h4>
+                </div>
+                <div class="row modal-row">
+                    <div class="col-sm-12">
+                        Standard Occupational Classification, US federal government job classification system.  A total of 840 occupations are recognized in the classification system.  For the WA STEM labor market analysis, a total of 811 occupations were included in the analysis (787 for King, 741 for Spokane; 741 for Vancouver, 741 for Yakima).  SOC codes were last updated in 2010.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Small modal -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Annual Median Salary (WA State ESD MSA/MD)</h4>
+                </div>
+                <div class="row modal-row">
+                    <div class="col-sm-12">
+                        Reported median salaries of workers in the job.  The data comes from WA State Employment Security, Occupational Employment and Wage Estimates.The data encompasses the local Metropolitan Statistical Area (MSA)/MD.  See below for the geographic boundaries for the 4 regions highlighted in this report.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Small modal -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Median Hourly Wage (WA State ESD, MSA/MD)</h4>
+                </div>
+                <div class="row modal-row">
+                    <div class="col-sm-12">
+                        Reported/calculated median hourly wages of workers in the job. The data comes from WA State Employment Security, Occupational Employment and Wage Estimates. The data encompasses the local Metropolitan Statistical Area (MSA)/MD.  See below for the geographic boundaries for the 4 regions highlighted in this report.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Small modal -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Entry Educational Level (US Bureau of Labor Statistics)</h4>
+                </div>
+                <div class="row modal-row">
+                    <div class="col-sm-12">
+                        Defined by the 2014 Educational and Training Assignments by US Bureau of Labor Statistics. Economists have ͞assigned occupations to categories͟ using the American Community Survey, Occupational Information Network (ONET), National Center for Education Statistics to arrive at the Entry Educational Level.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Small modal -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Demand and Decline (WA State ESD, WDA) </h4>
+                </div>
+                <div class="row modal-row">
+                    <div class="col-sm-12">
+                        Washington State Employment Security Department produces a list of jobs (WA State and Workforce Development Area (WDA) Demand/Decline List) on a regular basis that describes which jobs are in demand (grown), not in demand (no change) and in decline.  The data is not provided in real time and lags behind by a couple of quarters.  Data for this report is from 2015. See below for the geographic boundaries for the 4 regions highlighted in this report.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Small modal -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Demand and Decline (WA State ESD, WDA) </h4>
+                </div>
+                <div class="row modal-row">
+                    <div class="col-sm-12">
+                        Washington State Employment Security Department produces data for each Workforce Development Area (WDA).  There are 12 WDAs in Washington.See below for the geographic boundaries for the 4 regions highlighted in this report.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div "style="margin-top:30px; margin-left:100px; margin-bottom:50px; min-height:200px">
         
         <div id="searchInputs">
@@ -59,8 +158,10 @@
     </div>
 
         <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="~/Scripts/utilities.js"></script>
         <script src="~/Scripts/home.js"></script>
+        <script src="~/Scripts/data_definition_modals.js"></script>
 
         <script type="text/javascript">
             $(document).ready(function () {
