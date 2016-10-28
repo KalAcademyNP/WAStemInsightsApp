@@ -41,14 +41,14 @@ function renderResults(arr) {
   
         result += '<table class="table table-striped" style="font-size:8pt;color:#000000;" width="100%"><tr style="font-weight:bold;"><td>'
                              + 'Job Category <span id="job-category" class="glyphicon glyphicon-question-sign"></span></td><td>'
-                             + 'Job Title <span id="soc-codes" class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Job Title <span id="job-title" class="glyphicon glyphicon-question-sign"></span></td><td>'
                              + 'Annual Median Salary($) <span id="ams" class="glyphicon glyphicon-question-sign"></span></td><td>'
                              + 'Median Hourly Wage($) <span id="mhw" class="glyphicon glyphicon-question-sign"></span></td><td>'
                              + 'Entry Education Level <span id="eel" class="glyphicon glyphicon-question-sign"></span></td><td>'
-                             + 'Total Jobs Added <span class="glyphicon glyphicon-question-sign"></span></td><td>'
-                             + 'Average Annual Growth Rate(%) <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Total Jobs Added </td><td>'
+                             + 'Average Annual Growth Rate(%)</td><td>'
                              + 'Average Annual Job Openings <span id="aajo"class="glyphicon glyphicon-question-sign"></span></td><td>'
-                             + 'Estimated Employment 2014 <span class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Estimated Employment 2014 </td><td>'
                              + 'Estimated Employment 2024 <span id="estimated-employment" class="glyphicon glyphicon-question-sign"></span></td>'
                              + '</tr>';
     }
