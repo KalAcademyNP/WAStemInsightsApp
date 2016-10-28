@@ -40,7 +40,7 @@ function renderResults(arr) {
     if (arr.length > 0) {
   
         result += '<table class="table table-striped" style="font-size:8pt;color:#000000;" width="100%"><tr style="font-weight:bold;"><td>'
-                             + 'Job Category <span id="job-category" class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Job Category </td><td>'
                              + 'Job Title <span id="job-title" class="glyphicon glyphicon-question-sign"></span></td><td>'
                              + 'Annual Median Salary($) <span id="ams" class="glyphicon glyphicon-question-sign"></span></td><td>'
                              + 'Median Hourly Wage($) <span id="mhw" class="glyphicon glyphicon-question-sign"></span></td><td>'

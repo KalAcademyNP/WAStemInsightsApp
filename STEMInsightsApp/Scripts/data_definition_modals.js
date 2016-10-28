@@ -1,9 +1,5 @@
 ﻿$(document).ready(function () {
     $(document).on('click', '.glyphicon', function (event) {
-        console.log("hearing click", event.target.id);
-      //  if (event.target.id === "job-category") {
-          //  $('#soc-modal').modal('show');
-      //  } else
         if (event.target.id === "job-title") {
             console.log(event.target.id);
             $('#soc-modal').modal('show');
@@ -19,9 +15,4 @@
                 $('#estimated-employment-modal').modal('show');
             }
     })
-     //  $('#job-category').click(function () {
-       //    console.log("hearing click");
-       // })
-
-
 })

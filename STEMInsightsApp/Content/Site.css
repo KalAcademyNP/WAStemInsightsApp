@@ -169,6 +169,10 @@ textarea {
     font-size:9pt;
     
 }
+/* MODALS */
 .modal-row {
     margin: 1em auto;
+}
+.glyphicon {
+    cursor: pointer;
 }
