@@ -35,7 +35,7 @@
 }
 
 function renderResults(arr) {
-    
+   
     var result = "<span style='font-size:9pt;color:#000000'>We found " + arr.length + " records!</span><br>";
     if (arr.length > 0) {
   

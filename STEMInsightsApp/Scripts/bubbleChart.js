@@ -1,6 +1,6 @@
 ﻿    getJobTrends().done(function (trend) {
         console.log("retrieved trend")
-        console.log(trend)
+        console.log("TREND", trend)
         var root = {
             "name": "EducationLevels",
             "children": trend
@@ -14,7 +14,7 @@
 
         recurse(null, root);
         result = { children: classes };
-        console.log(result);
+        console.log("result ", result);
         var r = 560,
             format = d3.format(",d"),
             fill = d3.scale.category20c();
@@ -54,7 +54,7 @@
 
         node.append("circle")
             .attr("r", function (d) { return d.r; })
-            //.style("fill", function (d) { return d3.rgb(255, d.value % 255, 0); }) //shades of orange, yellow, red
+           // .style("fill", function (d) { return d3.rgb(255, d.value % 255, 0); }) //shades of orange, yellow, red
             .style("fill", function (d) { return fill(d.value); }) // For random colors
             .on("mouseover", function(d) {
                 tooltip.text(d.className + ": " + format(d.value));
@@ -69,7 +69,6 @@
           return tooltip.style("visibility", "hidden");
       })
         .on("click", function (d) {
-            console.log(d)
             console.log(d.className + "Got Clicked!");
             getJobTrendsDetail(d.className).done(function (jobDetail) {
                 /*Show the table for hte job details**/
