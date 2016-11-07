@@ -12,7 +12,7 @@
    
     <div class="main-header">
          
-        <div style="display:inline-block;float:left;width:70%">   
+        <div id="navbar-container">   
            <nav class="navbar  navbar-default">
            
                 <div class="navbar-header">
@@ -21,8 +21,7 @@
                     </a>
                 </div>
                
-               <div style="padding-top:25px;padding-left:245px">
-
+               <div id="navbar-items">
                    <ul class="nav navbar-nav">
                        <li><a class="top-link"href="#">Home</a></li>
                        <li><a class="top-link" href="http://www.washingtonstem.org/Resource-Hub/">Resource Hub</a></li>
@@ -35,9 +34,9 @@
             </nav>
         </div>
  
-        <div style="position:relative; top:0; padding-right:80px; float:right;">
+        <div id="navbar-badge">
                 <a href="#">
-                    <img src="~/Content/images/CareerInsight_Badge.png" border="0" style="width:130px; height:130px" />
+                    <img id="badge-image" src="~/Content/images/CareerInsight_Badge.png" border="0" />
                 </a> 
         </div>
     </div>
@@ -49,7 +48,7 @@
         </ul>
     </div>
 
-    <div class="container body-content" style="position:relative; background-color:white; top:20px">
+    <div class="container body-content">
         @RenderBody()
     </div>
 
@@ -59,15 +58,12 @@
     </div>
     
      <div class="footer">
-        <div style="float:left;padding-left:20px;">
+        <div id="footer-wastem">
             <ul class="nav navbar-nav">
-               
-                <li class="active"><a class="bottom-link" href="http://www.washingtonstem.org/">@DateTime.Now.Year - Washington STEAM</a></li>
-                    
-                
+                <li class="active"><a class="bottom-link" href="http://www.washingtonstem.org/">@DateTime.Now.Year - Washington STEM</a></li>
             </ul>
         </div> 
-        <div style="float:right;padding-right:50px;">
+        <div id="footer-links">
              <ul class="nav navbar-nav">
                  <li class="active"><a class="bottom-link" href="http://www.washingtonstem.org/">Home</a></li>
                  <li><a class="bottom-link" href="http://www.washingtonstem.org//Contact/">Contact</a></li>
