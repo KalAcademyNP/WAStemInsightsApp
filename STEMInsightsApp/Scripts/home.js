@@ -35,7 +35,7 @@
 }
 
 function renderResults(arr) {
-    
+    console.log("Arr length:", arr.length);
     var result = "<span style='font-size:9pt;color:#000000'>We found " + arr.length + " records!</span><br>";
     if (arr.length > 0) {
   
@@ -62,9 +62,9 @@ function renderResults(arr) {
             avgN = Math.round(avgN * 10000) / 100
             avg = avgN + "";
         }
-
+        
         result += '<tr><td>'
-        //console.log("DATA", Object.keys(data));
+                             //console.log("Job Title", data.OccupationalTitle);
                              + data.JobTitle + '</td><td>'
                              + data.OccupationalTitle + '</td><td>'
                              + data.AnnualMedianSalary + '</td><td>'

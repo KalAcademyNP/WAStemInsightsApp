@@ -9,6 +9,8 @@ namespace STEMInsightsAPI.Models
 {
     public class SearchResult
     {
+        public string JobCategory { get; set; }
+
         public string OccupationalTitle { get; set; }
 
         public string EntryEducationLevel { get; set; }

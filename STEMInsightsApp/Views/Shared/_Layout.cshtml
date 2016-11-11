@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Washington STEM</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -62,7 +62,7 @@
         <div style="float:left;padding-left:20px;">
             <ul class="nav navbar-nav">
                
-                <li class="active"><a class="bottom-link" href="http://www.washingtonstem.org/">@DateTime.Now.Year - Washington STEAM</a></li>
+                <li class="active"><a class="bottom-link" href="http://www.washingtonstem.org/">@DateTime.Now.Year - Washington STEM</a></li>
                     
                 
             </ul>
@@ -76,19 +76,15 @@
              </ul>
          </div>
     </div>
-          
-    
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     @Styles.Render("~/Content/css")
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <script src="~/Scripts/utilities.js"></script>
     <script src="~/Scripts/home.js"></script>
-
-
 
 </body>
 </html>

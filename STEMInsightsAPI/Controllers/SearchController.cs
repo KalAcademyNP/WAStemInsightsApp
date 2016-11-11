@@ -83,6 +83,7 @@ namespace STEMInsightsAPI.Controllers
             try
             {
                 var db = new WAStemModel();
+                Console.Write("Hello there {0} ", db.Database);
                 return db.Database.SqlQuery<String>("sp_GetOccupationalTitles");
             }
             catch (Exception)
@@ -106,6 +107,20 @@ namespace STEMInsightsAPI.Controllers
 
         }
 
+        [HttpGet]
+        public IEnumerable<string> GetJobCategories()
+        {
+            try
+            {
+                var db = new WAStemModel();
+                
+                return db.Database.SqlQuery<String>("sp_GetJobCategories");
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
         // POST: api/Search
         public void Post([FromBody]string value)
         {
