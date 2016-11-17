@@ -83,7 +83,6 @@ namespace STEMInsightsAPI.Controllers
             try
             {
                 var db = new WAStemModel();
-                Console.Write("Hello there {0} ", db.Database);
                 return db.Database.SqlQuery<String>("sp_GetOccupationalTitles");
             }
             catch (Exception)

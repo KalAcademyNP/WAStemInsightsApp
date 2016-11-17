@@ -11,11 +11,13 @@ namespace STEMInsightsAPI.Models
     {
         public int Id { get; set; }
 
+        [Column("WAGE (H,M,L)")]
         [StringLength(255)]
-        public string WAGE { get; set; }
+        public string WAGE__H_M_L_ { get; set; }
 
+        [Column("ED (H,M,L)")]
         [StringLength(255)]
-        public string ED { get; set; }
+        public string ED__H_M_L_ { get; set; }
 
         [Column("RATING_(3 = DEMAND, 2 = BALANCED, 1 = DECLINE)")]
         public double? RATING__3___DEMAND__2___BALANCED__1___DECLINE_ { get; set; }
@@ -55,6 +57,10 @@ namespace STEMInsightsAPI.Models
         [StringLength(255)]
         public string INDUSTRY_SECTOR { get; set; }
 
+        [Column("OCCUPATIONAL CATEGORY")]
+        [StringLength(255)]
+        public string OCCUPATIONAL_CATEGORY { get; set; }
+
         [Column("ESTIMATED EMPLOYMENT 2014")]
         public double? ESTIMATED_EMPLOYMENT_2014 { get; set; }
 
@@ -82,8 +88,8 @@ namespace STEMInsightsAPI.Models
         [Column("AVERAGE ANNUAL JOB  OPENINGS 2014-2024")]
         public double? AVERAGE_ANNUAL_JOB__OPENINGS_2014_2024 { get; set; }
 
-        [StringLength(255)]
-        public string ONET { get; set; }
+        //[StringLength(255)]
+        //public string F23 { get; set; }
 
         [Column("ONET LINK: Provides Job Description, Samples of reported Job Tit")]
         [StringLength(255)]
