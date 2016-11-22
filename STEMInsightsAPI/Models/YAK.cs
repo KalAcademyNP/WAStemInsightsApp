@@ -33,21 +33,17 @@ namespace STEMInsightsAPI.Models
         [StringLength(255)]
         public string OCCUPATIONAL_TITLE { get; set; }
 
-        [Column("AVERAGE WAGE")]
-        [StringLength(255)]
-        public string AVERAGE_WAGE { get; set; }
+        [Column("AVERAGE WAGE", TypeName = "money")]
+        public decimal? AVERAGE_WAGE { get; set; }
 
-        [Column("50TH %")]
-        [StringLength(255)]
-        public string C50TH__ { get; set; }
+        [Column("50TH %", TypeName = "money")]
+        public decimal? C50TH__ { get; set; }
 
-        [Column("ANNUAL MEDIAN SALARY")]
-        [StringLength(255)]
-        public string ANNUAL_MEDIAN_SALARY { get; set; }
+        [Column("ANNUAL MEDIAN SALARY", TypeName = "money")]
+        public decimal? ANNUAL_MEDIAN_SALARY { get; set; }
 
-        [Column("MEDIAN HOURLY WAGE")]
-        [StringLength(255)]
-        public string MEDIAN_HOURLY_WAGE { get; set; }
+        [Column("MEDIAN HOURLY WAGE", TypeName = "money")]
+        public decimal? MEDIAN_HOURLY_WAGE { get; set; }
 
         [Column("ENTRY EDUCATIONAL LEVEL (BLS)")]
         [StringLength(255)]
@@ -61,46 +57,41 @@ namespace STEMInsightsAPI.Models
         [StringLength(255)]
         public string INDUSTRY_SECTOR { get; set; }
 
-        [Column("ESTIMATED EMPLOYMENT 2014")]
+        [Column("OCCUPATIONAL CATEGORY")]
         [StringLength(255)]
-        public string ESTIMATED_EMPLOYMENT_2014 { get; set; }
+        public string OCCUPATIONAL_CATEGORY { get; set; }
+
+        [Column("ESTIMATED EMPLOYMENT 2014")]
+        public double? ESTIMATED_EMPLOYMENT_2014 { get; set; }
 
         [Column("ESTIMATED EMPLOYMENT 2024")]
-        [StringLength(255)]
-        public string ESTIMATED_EMPLOYMENT_2024 { get; set; }
+        public double? ESTIMATED_EMPLOYMENT_2024 { get; set; }
 
         [Column("TOTAL JOBS ADDED 2014-2024")]
-        [StringLength(255)]
-        public string TOTAL_JOBS_ADDED_2014_2024 { get; set; }
+        public double? TOTAL_JOBS_ADDED_2014_2024 { get; set; }
 
-        [Column("  Average annual growth rate 2014-2019")]
-        [StringLength(255)]
-        public string C__Average_annual_growth_rate_2014_2019 { get; set; }
+        [Column("Average annual growth rate 2014-2019")]
+        public double? C__Average_annual_growth_rate_2014_2019 { get; set; }
 
-        [Column("  Average annual growth rate 2019-2024")]
-        [StringLength(255)]
-        public string C__Average_annual_growth_rate_2019_2024 { get; set; }
+        [Column("Average annual growth rate 2019-2024")]
+        public double? C__Average_annual_growth_rate_2019_2024 { get; set; }
 
         [Column("AVERAGE ANNUAL GROWTH RATE 2014-2024")]
-        [StringLength(255)]
-        public string AVERAGE_ANNUAL_GROWTH_RATE_2014_2024 { get; set; }
+        public double? AVERAGE_ANNUAL_GROWTH_RATE_2014_2024 { get; set; }
 
-        [Column("  AVERAGE ANNUAL TOTAL OPENINGS  2014-2019")]
-        [StringLength(255)]
-        public string C__AVERAGE_ANNUAL_TOTAL_OPENINGS__2014_2019 { get; set; }
+        [Column("AVERAGE ANNUAL TOTAL OPENINGS  2014-2019")]
+        public double? C__AVERAGE_ANNUAL_TOTAL_OPENINGS__2014_2019 { get; set; }
 
-        [Column("  AVERAGE ANNUAL TOTAL OPENINGS  2019-2024")]
-        [StringLength(255)]
-        public string C__AVERAGE_ANNUAL_TOTAL_OPENINGS__2019_2024 { get; set; }
+        [Column("AVERAGE ANNUAL TOTAL OPENINGS  2019-2024")]
+        public double? C__AVERAGE_ANNUAL_TOTAL_OPENINGS__2019_2024 { get; set; }
 
         [Column("AVERAGE ANNUAL JOB  OPENINGS 2014-2024")]
-        [StringLength(255)]
-        public string AVERAGE_ANNUAL_JOB__OPENINGS_2014_2024 { get; set; }
+        public double? AVERAGE_ANNUAL_JOB__OPENINGS_2014_2024 { get; set; }
 
-        [StringLength(255)]
-        public string F23 { get; set; }
+        //[StringLength(255)]
+        //public string F23 { get; set; }
 
-        [Column("ONET LINK: Provides Job Description, Samples of reported Job Tit")]
+        [Column("ONET LINK")]
         [StringLength(255)]
         public string ONET_LINK__Provides_Job_Description__Samples_of_reported_Job_Tit { get; set; }
     }

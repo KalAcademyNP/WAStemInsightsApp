@@ -31,6 +31,12 @@ searchJobs = function (county, title, level) {
     });
 };
 
+getJobCategories = function () {
+    return $.ajax({
+        url: "http://steminsightsapi.azurewebsites.net/api/Search/GetJobCategories"
+    });
+};
+
 getTitles = function () {
     return $.ajax({
         url: "http://steminsightsapi.azurewebsites.net/api/Search/GetOccupationalTitles"
