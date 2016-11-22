@@ -6,6 +6,7 @@
             titlesUlContent += li;
         });
         $("#titlesUl").append(titlesUlContent);
+
         getEducationalLevels().done(function (levels) {
             var levelsUlContent = "";
             levels.forEach(function (level) {
@@ -15,6 +16,18 @@
             $("#levelsUl").append(levelsUlContent);
         }).fail(function (error) {
             console.log("failed to get the levels");
+        })
+
+        getJobCategories().done(function (job_categories) {
+            var categoriesUlContent = "";
+            job_categories.forEach(function (category) {
+                var li = "<option value=\"" + category + "\">" + category + "</option>";
+                categoriesUlContent += li;
+            });
+            $("#categoriesUl").append(categoriesU1Content);
+        }).fail(function (error) {
+            console.log("ERROR", Object.keys(error));
+            console.log("the error is", error.error, error.responseText);
         })
     }).fail(function (error) {
         console.log("failed to get the titles");
@@ -29,7 +42,7 @@
             var htmlResults = renderResults(searchResults);
             $('#spinner').hide();
             $("#searchResults").html(htmlResults);
-        }).fail(function (error) { console.log("failed to call the search api"); });
+        }).fail(function (error) { console.log("failed to call the search api: ", error); });
     });
 
 }
