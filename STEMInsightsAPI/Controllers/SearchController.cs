@@ -78,6 +78,7 @@ namespace STEMInsightsAPI.Controllers
             }
         }
 
+        [HttpGet]
         public IEnumerable<string> GetOccupationalTitles()
         {
             try
@@ -91,7 +92,7 @@ namespace STEMInsightsAPI.Controllers
             }
         }
 
-
+        [HttpGet]
         public IEnumerable<string> GetEducationalLevels()
         {
             try
