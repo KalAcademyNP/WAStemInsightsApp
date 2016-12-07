@@ -61,3 +61,9 @@ var getJobTrendsDetail = function (level) {
         url: "http://steminsightsapi.azurewebsites.net/api/Search/GetJobTrendsDetail/?educationalLevel="+level
     });
 }
+var getJobCategories = function () {
+    return $.ajax({
+        url: "http://steminsightsapi.azurewebsites.net/api/Search/GetJobCategories"
+    })
+}
+
