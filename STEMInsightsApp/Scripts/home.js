@@ -19,7 +19,9 @@
          }); */
     //    $("#titlesUl").append(titlesUlContent);
 
-    getEducationLevel();
+    //getEducationLevels();
+
+ /*   getEducationLevel();
     function getEducationLevel() {
         var levelsUlContent = "";
         console.log("DATA", dataWA);
@@ -30,6 +32,7 @@
         })
         $("#levelsUl").append(levelsUlContent);
     };
+    */
 /*
        getEducationalLevels().done(function (levels) {
             var levelsUlContent = "";

@@ -4,7 +4,8 @@
 };
 
 getEducationLevels = function () {
-    var eduLevels = []
+    var eduLevels = ['Bachelor\'s degree', 'Doctoral or professional degree', 'High school diploma or equivalent', 'Some college, no degree', 'Postsecondary nondegree award', 'No formal educational credential', 'Apprenticeship', 'Master\'s degree', 'Associate\'s degree'];
+    return eduLevels;
 }
 
 searchJobs = function (county, title, level) {
