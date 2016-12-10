@@ -36,12 +36,20 @@ getJobCategories = function () {
         url: "http://steminsightsapi.azurewebsites.net/api/Search/GetJobCategories"
     });
 };
+//console.log("JSON: ", dataWA);
+//getTitle = function () {
+ //   dataWA.forEach(function (element) {
+ //       element = element.OCCTITLE;
+      //  console.log("element.title", element.OCCTITLE);
+ //   })
+//};
 
-getTitles = function () {
-    return $.ajax({
-        url: "http://steminsightsapi.azurewebsites.net/api/Search/GetOccupationalTitles"
-    });
-};
+
+//getTitles = function () {
+ //   return $.ajax({
+ //       url: "http://steminsightsapi.azurewebsites.net/api/Search/GetOccupationalTitles"
+ //   });
+//};
 
 getEducationalLevels = function () {
     return $.ajax({

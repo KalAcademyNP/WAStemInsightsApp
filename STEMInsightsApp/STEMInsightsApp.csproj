@@ -200,6 +200,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\StemInsights.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\wa.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

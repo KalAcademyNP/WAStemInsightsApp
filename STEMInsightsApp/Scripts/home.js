@@ -1,11 +1,25 @@
 ﻿init = function () {
+    //console.log("JSON: ", dataWA);
+    
+    getTitle();
+    function getTitle() {
+       var titlesUlContent = "";
+       dataWA.forEach(function (element) {
+          var li = "<option value=\"" + element.OCCTITLE + "\">" + element.OCCTITLE + "</option>";
+          titlesUlContent += li;
+       })
+       $("#titlesUl").append(titlesUlContent);
+    };
+
+
+
     getTitles().done(function (titles) {
-        var titlesUlContent = "";
-        titles.forEach(function (title) {
-            var li = "<option value=\"" + title + "\">" + title + "</option>";
-            titlesUlContent += li;
+       var titlesUlContent = "";
+       titles.forEach(function (title) {
+          var li = "<option value=\"" + title + "\">" + title + "</option>";
+           titlesUlContent += li;
         });
-        $("#titlesUl").append(titlesUlContent);
+    //    $("#titlesUl").append(titlesUlContent);
 
         getEducationalLevels().done(function (levels) {
             var levelsUlContent = "";
