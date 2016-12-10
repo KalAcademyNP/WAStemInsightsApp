@@ -1,33 +1,43 @@
-﻿init = function () {
+﻿var init = function () {
     //console.log("JSON: ", dataWA);
-    
+    //getTitle pulls JSON data from wa.json file that's loaded in a script tag in Index.cshtml
     getTitle();
     function getTitle() {
-       var titlesUlContent = "";
-       dataWA.forEach(function (element) {
-          var li = "<option value=\"" + element.OCCTITLE + "\">" + element.OCCTITLE + "</option>";
-          titlesUlContent += li;
-       })
-       $("#titlesUl").append(titlesUlContent);
+        var titlesUlContent = "";
+        dataWA.forEach(function (element) {
+            var li = "<option value=\"" + element.OCCTITLE + "\">" + element.OCCTITLE + "</option>";
+            titlesUlContent += li;
+        })
+        $("#titlesUl").append(titlesUlContent);
     };
 
-
-
-    getTitles().done(function (titles) {
-       var titlesUlContent = "";
-       titles.forEach(function (title) {
-          var li = "<option value=\"" + title + "\">" + title + "</option>";
-           titlesUlContent += li;
-        });
+    /* getTitles().done(function (titles) {
+        var titlesUlContent = "";
+        titles.forEach(function (title) {
+           var li = "<option value=\"" + title + "\">" + title + "</option>";
+            titlesUlContent += li;
+         }); */
     //    $("#titlesUl").append(titlesUlContent);
 
-        getEducationalLevels().done(function (levels) {
+    getEducationLevel();
+    function getEducationLevel() {
+        var levelsUlContent = "";
+        console.log("DATA", dataWA);
+        dataWA.forEach(function (element) {
+            console.log(element.EDLEVEL);
+            var li = "<option value=\"" + element.EDLEVEL + "\">" + element.EDLEVEL + "</option>";
+            levelsUlContent += li;
+        })
+        $("#levelsUl").append(levelsUlContent);
+    };
+/*
+       getEducationalLevels().done(function (levels) {
             var levelsUlContent = "";
             levels.forEach(function (level) {
                 var li = "<option value=\"" + level + "\">" + level + "</option>";
                 levelsUlContent += li;
             });
-            $("#levelsUl").append(levelsUlContent);
+           // $("#levelsUl").append(levelsUlContent);
         }).fail(function (error) {
             console.log("failed to get the levels");
         })
@@ -58,7 +68,7 @@
             $("#searchResults").html(htmlResults);
         }).fail(function (error) { console.log("failed to call the search api: ", error); });
     });
-
+*/
 }
 
 function renderResults(arr) {

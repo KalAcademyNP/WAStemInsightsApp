@@ -3,6 +3,10 @@
     return regions;
 };
 
+getEducationLevels = function () {
+    var eduLevels = []
+}
+
 searchJobs = function (county, title, level) {
     var params = "";
     //add job category here
@@ -51,11 +55,11 @@ getJobCategories = function () {
  //   });
 //};
 
-getEducationalLevels = function () {
-    return $.ajax({
-        url: "http://steminsightsapi.azurewebsites.net/api/Search/GetEducationalLevels"
-    });
-};
+//getEducationalLevels = function () {
+//    return $.ajax({
+//       url: "http://steminsightsapi.azurewebsites.net/api/Search/GetEducationalLevels"
+//    });
+//};
 
 
 var getJobTrends = function () {
