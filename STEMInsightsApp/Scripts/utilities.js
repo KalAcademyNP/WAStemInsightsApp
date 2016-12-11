@@ -51,8 +51,11 @@ searchJob = function (county, title, level) {
         dataWA.forEach(function (element, index, array) {
             //console.log("ELEMENT: ", element.EDLEVEL)
             if (element.EDLEVEL === level) {
+                console.log("INDEX: ", index);
+                console.log("ARRAY: ", array);
+                console.log("ARRAY with index: ", array[index]);
                 console.log("ELEMENT should have the right ed level: ", element);
-                result.push(element);
+                result.push(array[index]);
             }
         })
     }
