@@ -105,6 +105,7 @@ function renderResults(arr) {
 
         result += '<tr><td>'
         //console.log("DATA", Object.keys(data));
+
                              + data.JobTitle + '</td><td>'
                              + data.OccupationalTitle + '</td><td>'
                              + data.AnnualMedianSalary + '</td><td>'
