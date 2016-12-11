@@ -40,30 +40,189 @@ searchJob = function (county, title, level) {
     console.log("searchJob");
     console.log("level: ", level);
     var result = [];
-    if (title !== null) {
-        dataWA.forEach(function (element, index, array) {
-            if (element.OCCTITLE === title) {
-                result.push(element);
-            }
-        })
-    } if (level !== null) {
-        console.log("level: ", level)
-        dataWA.forEach(function (element, index, array) {
-            //console.log("ELEMENT: ", element.EDLEVEL)
-            if (element.EDLEVEL === level) {
-                console.log("INDEX: ", index);
-                console.log("ARRAY: ", array);
-                console.log("ARRAY with index: ", array[index]);
-                console.log("ELEMENT should have the right ed level: ", element);
-                result.push(array[index]);
-            }
-        })
+    if (title !== null && level !== null && county == "WA") {
+        console.log("county value here: ", county);
+        if (title == "ALL") {
+            dataWA.forEach(function (element, index, array) {
+                
+                if (element.EDLEVEL === level) {
+                    console.log("Element ed level:", element.EDLEVEL);
+                    result.push(element);
+                }
+            })
+        }
+        else if(level =="ALL"){
+            dataWA.forEach(function (element, index, array) {
+                if(element.OCCTITLE === title){
+                    result.push(element);
+                }
+            })
+        }
+        else if (level == "ALL" && title == "ALL"){
+            dataWA.forEach(function (element, index, array) {
+                    result.push(element);
+                })
+        }
+        else {
+            dataWA.forEach(function (element, index, array) {
+                if (element.OCCTITLE === title && element.EDLEVEL === level) {
+                    result.push(element);
+                }
+            })
+        }
     }
-    if (title == "ALL") {
-        dataWA.forEach(function (element, index, array) {
-            result.push(element);
-        })
+    if (title !== null && level !== null && county !== "WA") {
+        console.log("county value here: ", county);
+        if (county == "SPOK") {
+            allCounties.forEach(function (element, index, array) {
+                if (element.county == "spokane") {
+                    if (title == "ALL" && level !== "ALL") {
+                        if (element.EDLEVEL === level) {
+                            result.push(element);
+                        }
+                    }
+                    else if (level == "ALL" && title != "ALL") {
+                        if (element.OCCTITLE === title) {
+                            result.push(element);
+                        }
+                    }
+                    else if (level == "ALL" && title == "ALL"){
+                        result.push(element);
+                    }
+                    else {
+                        if (element.EDLEVEL === level && element.OCCTITLE === title) {
+                            result.push(element);
+                        }    
+                    }
+                }
+            });
+        }
+       
+        if (county == "YAK") {
+            allCounties.forEach(function (element, index, array) {
+                if (element.county == "yakima") {
+                    if (title == "ALL" && level !== "ALL") {
+                        if (element.EDLEVEL === level) {
+                            result.push(element);
+                        }
+                    }
+                    else if (level == "ALL" && title != "ALL") {
+                        if (element.OCCTITLE === title) {
+                            result.push(element);
+                        }
+                    }
+                    else if (level == "ALL" && title == "ALL") {
+                        result.push(element);
+                    }
+                    else {
+                        if (element.EDLEVEL === level && element.OCCTITLE === title) {
+                            result.push(element);
+                        }
+                    }
+                }
+            });
+        }
+
+        if (county == "VANC") {
+            allCounties.forEach(function (element, index, array) {
+                if (element.county == "vancouver") {
+                    if (title == "ALL" && level !== "ALL") {
+                        if (element.EDLEVEL === level) {
+                            result.push(element);
+                        }
+                    }
+                    else if (level == "ALL" && title != "ALL") {
+                        if (element.OCCTITLE === title) {
+                            result.push(element);
+                        }
+                    }
+                    else if (level == "ALL" && title == "ALL") {
+                        result.push(element);
+                    }
+                    else {
+                        if (element.EDLEVEL === level && element.OCCTITLE === title) {
+                            result.push(element);
+                        }
+                    }
+                }
+            });
+        }
+
+        if (county == "KING") {
+            allCounties.forEach(function (element, index, array) {
+                if (element.county == "king") {
+                    if (title == "ALL" && level !== "ALL") {
+                        if (element.EDLEVEL === level) {
+                            result.push(element);
+                        }
+                    }
+                    else if (level == "ALL" && title != "ALL") {
+                        if (element.OCCTITLE === title) {
+                            result.push(element);
+                        }
+                    }
+                    else if (level == "ALL" && title == "ALL") {
+                        result.push(element);
+                    }
+                    else {
+                        if (element.EDLEVEL === level && element.OCCTITLE === title) {
+                            result.push(element);
+                        }
+                    }
+                }
+            });
+        }
+
+        if (county == "SNO") {
+            allCounties.forEach(function (element, index, array) {
+                if (element.county == "snohomish") {
+                    if (title == "ALL" && level !== "ALL") {
+                        if (element.EDLEVEL === level) {
+                            result.push(element);
+                        }
+                    }
+                    else if (level == "ALL" && title != "ALL") {
+                        if (element.OCCTITLE === title) {
+                            result.push(element);
+                        }
+                    }
+                    else if (level == "ALL" && title == "ALL") {
+                        result.push(element);
+                    }
+                    else {
+                        if (element.EDLEVEL === level && element.OCCTITLE === title) {
+                            result.push(element);
+                        }
+                    }
+                }
+            });
+        }
     }
+
+    //if (title !== null) {
+    //    dataWA.forEach(function (element, index, array) {
+    //        if (element.OCCTITLE === title) {
+    //            result.push(element);
+    //        }
+    //    })
+    //} if (level !== null) {
+    //    console.log("level: ", level)
+    //    dataWA.forEach(function (element, index, array) {
+    //        //console.log("ELEMENT: ", element.EDLEVEL)
+    //        if (element.EDLEVEL === level) {
+    //            console.log("INDEX: ", index);
+    //            console.log("ARRAY: ", array);
+    //            console.log("ARRAY with index: ", array[index]);
+    //            console.log("ELEMENT should have the right ed level: ", element);
+    //            result.push(array[index]);
+    //        }
+    //    })
+    //}
+    //if (title == "ALL") {
+    //    dataWA.forEach(function (element, index, array) {
+    //        result.push(element);
+    //    })
+    //}
     console.log("result should be array", result);
     return result;
 }
