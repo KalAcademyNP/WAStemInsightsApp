@@ -36,13 +36,33 @@ searchJobs = function (county, title, level) {
     });
 };
 
+searchJobWithCategory = function (category, county, title, level) {
+    var result = [];
+    if (category == "ALL") {
+        console.log("category value here:", category);
+        return searchJob(county, title, level);
+    }
+    else {
+        if (county == "WA") {
+            dataWA.forEach(function (element, index, array) {
+                console.log(" category: ", category);
+                if (element.OCCCAT === category) {
+                    console.log("inside a WA search for category: ", category);
+                    console.log(element.county, element.OCCTITLE, element.EDLEVEL);
+                    searchJob("WA", element.OCCTITLE, element.EDLEVEL);
+                }
+            })
+        }
+    }
+    //return result;
+}
 searchJob = function (county, title, level) {
     console.log("searchJob");
     console.log("level: ", level);
     var result = [];
     if (title !== null && level !== null && county == "WA") {
         console.log("county value here: ", county);
-        if (title == "ALL") {
+        if (title == "ALL" && level !=="ALL") {
             dataWA.forEach(function (element, index, array) {
                 
                 if (element.EDLEVEL === level) {
@@ -51,7 +71,7 @@ searchJob = function (county, title, level) {
                 }
             })
         }
-        else if(level =="ALL"){
+        else if(level =="ALL" && title !== "ALL"){
             dataWA.forEach(function (element, index, array) {
                 if(element.OCCTITLE === title){
                     result.push(element);

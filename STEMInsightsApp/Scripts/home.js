@@ -77,10 +77,13 @@
     $("#searchBtn").click(function (event) {
         console.log("heard a click");
         $('#spinner').show();
+        var category = $("#categoriesUl").val();
         var county = $("#regionUl").val();
         var title = $("#titlesUl").val();
         var level = $("#levelsUl").val();
         console.log("level on click:", level)
+        //var searchResult = searchJobWithCategory(category, county, title, level);
+        //console.log("searchResult: ", searchJobWithCategory(category, county, title, level));
         var searchResult = searchJob(county, title, level);
         console.log("searchResult: ", searchJob(county, title, level));
         var htmlResults = renderResults(searchResult);
