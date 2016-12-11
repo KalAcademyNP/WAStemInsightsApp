@@ -80,6 +80,7 @@
         var county = $("#regionUl").val();
         var title = $("#titlesUl").val();
         var level = $("#levelsUl").val();
+        console.log("level on click:", level)
         var searchResult = searchJob(county, title, level);
         console.log("searchResult: ", searchJob(county, title, level));
         var htmlResults = renderResults(searchResult);
@@ -108,7 +109,8 @@ function renderResults(arr) {
     }
 
     $.each(arr, function (index, data) {
-        var avg = data.AverageAnnualGrowthRate;
+        var avg = data.AVGGRW1424;
+        //var avg = data.AverageAnnualGrowthRate;
         var avgN = parseFloat(avg);
         if (isNaN(avgN)) {
             avg = "";

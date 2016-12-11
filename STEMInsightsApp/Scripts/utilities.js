@@ -38,11 +38,20 @@ searchJobs = function (county, title, level) {
 
 searchJob = function (county, title, level) {
     console.log("searchJob");
+    console.log("level: ", level);
     var result = [];
-
-    if (title != null) {
+    if (title !== null) {
         dataWA.forEach(function (element, index, array) {
             if (element.OCCTITLE === title) {
+                result.push(element);
+            }
+        })
+    } if (level !== null) {
+        console.log("level: ", level)
+        dataWA.forEach(function (element, index, array) {
+            //console.log("ELEMENT: ", element.EDLEVEL)
+            if (element.EDLEVEL === level) {
+                console.log("ELEMENT should have the right ed level: ", element);
                 result.push(element);
             }
         })
