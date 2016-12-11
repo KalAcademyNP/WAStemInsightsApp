@@ -41,7 +41,7 @@ searchJob = function (county, title, level) {
     var result = [];
 
     if (title != null) {
-        allCounties.forEach(function (element, index, array) {
+        dataWA.forEach(function (element, index, array) {
             if (element.OCCTITLE === title) {
                 result.push(element);
             }
