@@ -56,6 +56,11 @@ searchJob = function (county, title, level) {
             }
         })
     }
+    if (title == "ALL") {
+        dataWA.forEach(function (element, index, array) {
+            result.push(element);
+        })
+    }
     console.log("result should be array", result);
     return result;
 }
