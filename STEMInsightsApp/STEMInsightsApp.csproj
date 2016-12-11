@@ -162,6 +162,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\allCounties.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -183,6 +184,7 @@
     <Content Include="Scripts\d3\LICENSE" />
     <Content Include="Scripts\d3\CHANGES.md" />
     <Content Include="Scripts\d3\API.md" />
+    <Content Include="Scripts\allCounties.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\data_definition_modals.js" />
     <Content Include="Scripts\home.js" />
