@@ -11,6 +11,7 @@
         $("#titlesUl").append(titlesUlContent);
     };
 
+
     /* getTitles().done(function (titles) {
         var titlesUlContent = "";
         titles.forEach(function (title) {
@@ -72,8 +73,21 @@
         }).fail(function (error) { console.log("failed to call the search api: ", error); });
     });
 */
-}
 
+    $("#searchBtn").click(function (event) {
+        console.log("heard a click");
+        $('#spinner').show();
+        var county = $("#regionUl").val();
+        var title = $("#titlesUl").val();
+        var level = $("#levelsUl").val();
+        var searchResult = searchJob(county, title, level);
+        console.log("searchResult: ", searchJob(county, title, level));
+        var htmlResults = renderResults(searchResult);
+        $('#spinner').hide();
+        $("#searchResults").html(htmlResults);
+    })
+
+}
 function renderResults(arr) {
     
     var result = "<span class='results-title'>We found " + arr.length + " records!</span><br>";
@@ -104,8 +118,22 @@ function renderResults(arr) {
         }
 
         result += '<tr><td>'
-        //console.log("DATA", Object.keys(data));
-                             + data.JobTitle + '</td><td>'
+       // console.log("DATA: ", data);
+      //  DATA WAGECAT,EDCAT,RATING,STEMFLAG,SOC,OCCTITLE,AVGWAGE,50THPERWAGE,ANNMEDSAL,MEDHRLYWAGE,EDLEVEL,DD,INDUSTRY,
+        // OCCCAT,ESTEMP2014,ESTEMP2024,JOBSADD1424,GROWTH1419,GROWTH1924,AVGGRW1424,ANNOPEN1419,ANNOPEN1924,ANNOPEN1424,ONET,county
+      //  console.log("title: ", data.OCCTITLE);
+                                + data.OCCCAT + '</td><td>'
+                                + data.OCCTITLE + '</td><td>'
+                                + data.ANNMEDSAL + '</td><td>'
+                                + data.MEDHRLYWAGE + '</td><td>'
+                                + data.EDLEVEL + '</td><td>'
+                                + data.JOBSADD1424 + '</td><td>'
+                                + avg + '</td><td>'
+                                + data.ANNOPEN1419 + '</td><td>'
+                                + data.ESTEMP2014 + '</td><td>'
+                                + data.ESTEMP2024 + '</td>'
+                                + '</tr>';
+                            /* + data.JobTitle + '</td><td>'
                              + data.OccupationalTitle + '</td><td>'
                              + data.AnnualMedianSalary + '</td><td>'
                              + data.MedianHourlyWage + '</td><td>'
@@ -115,7 +143,7 @@ function renderResults(arr) {
                              + data.AverageAnnualJobOpenings + '</td><td>'
                              + data.EstimatedEmployment2014 + '</td><td>'
                              + data.EstimatedEmployment2024 + '</td>'                        
-                             + '</tr>';
+                             + '</tr>'; */
     });
 
     result += "</table>";

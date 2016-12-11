@@ -36,6 +36,23 @@ searchJobs = function (county, title, level) {
     });
 };
 
+searchJob = function (county, title, level) {
+    console.log("searchJob");
+    var result = [];
+
+    if (title != null) {
+        allCounties.forEach(function (element, index, array) {
+            if (element.OCCTITLE === title) {
+                result.push(element);
+            }
+        })
+    }
+    console.log("result should be array", result);
+    return result;
+}
+
+
+
 getJobCategories = function () {
     return $.ajax({
         url: "http://steminsightsapi.azurewebsites.net/api/Search/GetJobCategories"
