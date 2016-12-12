@@ -43,7 +43,7 @@ searchJobWithCategory = function (category, county, title, level) {
         return searchJob(county, title, level);
     }
     else {
-        if (county == "WA") {
+        if (county === "WA") {
             dataWA.forEach(function (element, index, array) {
                 console.log(" category: ", category);
                 if (element.OCCCAT === category) {
@@ -63,29 +63,30 @@ searchJob = function (county, title, level) {
     if (title !== null && level !== null && county == "WA") {
         console.log("county value here: ", county);
         if (title == "ALL" && level !=="ALL") {
-            dataWA.forEach(function (element, index, array) {
-                
-                if (element.EDLEVEL === level) {
-                    console.log("Element ed level:", element.EDLEVEL);
+            dataWA.forEach(function (element, index, array) {                
+                if (element.EDLEVEL === level && element.STEMFLAG) {
+                    console.log("Element ed level:", element.STEMFLAG);
                     result.push(element);
                 }
             })
         }
         else if(level =="ALL" && title !== "ALL"){
             dataWA.forEach(function (element, index, array) {
-                if(element.OCCTITLE === title){
+                if (element.OCCTITLE === title && element.STEMFLAG) {
                     result.push(element);
                 }
             })
         }
-        else if (level == "ALL" && title == "ALL"){
+        else if (level == "ALL" && title == "ALL") {
             dataWA.forEach(function (element, index, array) {
+                if (element.STEMFLAG) {
                     result.push(element);
+                }
                 })
         }
         else {
             dataWA.forEach(function (element, index, array) {
-                if (element.OCCTITLE === title && element.EDLEVEL === level) {
+                if (element.OCCTITLE === title && element.EDLEVEL === level && element.STEMFLAG) {
                     result.push(element);
                 }
             })
@@ -97,21 +98,25 @@ searchJob = function (county, title, level) {
             allCounties.forEach(function (element, index, array) {
                 if (element.county == "spokane") {
                     if (title == "ALL" && level !== "ALL") {
-                        if (element.EDLEVEL === level) {
+                        if (element.EDLEVEL === level && element.STEMFLAG) {
                             result.push(element);
                         }
                     }
                     else if (level == "ALL" && title != "ALL") {
-                        if (element.OCCTITLE === title) {
+                        if (element.OCCTITLE === title && element.STEMFLAG) {
                             result.push(element);
                         }
                     }
-                    else if (level == "ALL" && title == "ALL"){
-                        result.push(element);
+                    else if (level == "ALL" && title == "ALL") {
+                        if(element.STEMFLAG) {
+                            result.push(element);
+                        }
                     }
                     else {
                         if (element.EDLEVEL === level && element.OCCTITLE === title) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }    
                     }
                 }
@@ -123,20 +128,28 @@ searchJob = function (county, title, level) {
                 if (element.county == "yakima") {
                     if (title == "ALL" && level !== "ALL") {
                         if (element.EDLEVEL === level) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                     else if (level == "ALL" && title != "ALL") {
                         if (element.OCCTITLE === title) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                     else if (level == "ALL" && title == "ALL") {
-                        result.push(element);
+                        if (element.STEMFLAG) {
+                            result.push(element);
+                        }
                     }
                     else {
                         if (element.EDLEVEL === level && element.OCCTITLE === title) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                 }
@@ -148,20 +161,28 @@ searchJob = function (county, title, level) {
                 if (element.county == "vancouver") {
                     if (title == "ALL" && level !== "ALL") {
                         if (element.EDLEVEL === level) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                     else if (level == "ALL" && title != "ALL") {
                         if (element.OCCTITLE === title) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                     else if (level == "ALL" && title == "ALL") {
-                        result.push(element);
+                        if (element.STEMFLAG) {
+                            result.push(element);
+                        }
                     }
                     else {
                         if (element.EDLEVEL === level && element.OCCTITLE === title) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                 }
@@ -173,20 +194,28 @@ searchJob = function (county, title, level) {
                 if (element.county == "king") {
                     if (title == "ALL" && level !== "ALL") {
                         if (element.EDLEVEL === level) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                     else if (level == "ALL" && title != "ALL") {
                         if (element.OCCTITLE === title) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                     else if (level == "ALL" && title == "ALL") {
-                        result.push(element);
+                        if (element.STEMFLAG) {
+                            result.push(element);
+                        }
                     }
                     else {
                         if (element.EDLEVEL === level && element.OCCTITLE === title) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                 }
@@ -198,20 +227,28 @@ searchJob = function (county, title, level) {
                 if (element.county == "snohomish") {
                     if (title == "ALL" && level !== "ALL") {
                         if (element.EDLEVEL === level) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                     else if (level == "ALL" && title != "ALL") {
                         if (element.OCCTITLE === title) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                     else if (level == "ALL" && title == "ALL") {
-                        result.push(element);
+                        if (element.STEMFLAG) {
+                            result.push(element);
+                        }
                     }
                     else {
                         if (element.EDLEVEL === level && element.OCCTITLE === title) {
-                            result.push(element);
+                            if (element.STEMFLAG) {
+                                result.push(element);
+                            }
                         }
                     }
                 }
