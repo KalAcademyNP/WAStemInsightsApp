@@ -49,12 +49,12 @@ searchJobWithCategory = function (category, county, title, level) {
                 if (element.OCCCAT === category) {
                     console.log("inside a WA search for category: ", category);
                     console.log(element.county, element.OCCTITLE, element.EDLEVEL);
-                    searchJob("WA", element.OCCTITLE, element.EDLEVEL);
+                    result = searchJob("WA", element.OCCTITLE, element.EDLEVEL);
                 }
             })
         }
     }
-    //return result;
+    return result;
 }
 searchJob = function (county, title, level) {
     console.log("searchJob");
