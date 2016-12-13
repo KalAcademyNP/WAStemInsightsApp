@@ -222,3 +222,35 @@ textarea {
     background-color: #fff;
     border: none;
 }
+
+/*D3 rendering*/
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #9E9E9E;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+table, tr, th, td {
+  border: 1px solid; 
+  border-collapse: collapse;
+  text-align: center;
+  padding: 5px 5px;
+}
+table {
+  background-color: lightgrey;  
+}
+th {
+  text-transform: uppercase;
+  /*color: #1b9891;*/
+}
