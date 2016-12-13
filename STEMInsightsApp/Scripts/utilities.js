@@ -36,7 +36,7 @@ searchJobs = function (county, title, level) {
     });
 };
 
-searchJobWithCategory = function (category, county, title, level) {
+/*searchJobWithCategory = function (category, county, title, level) {
     var result = [];
     if (category == "ALL") {
         console.log("category value here:", category);
@@ -283,7 +283,7 @@ searchJob = function (county, title, level) {
     console.log("result should be array", result);
     return result;
 }
-
+*/
 
 
 getJobCategories = function () {
@@ -300,17 +300,17 @@ getJobCategories = function () {
 //};
 
 
-//getTitles = function () {
- //   return $.ajax({
- //       url: "http://steminsightsapi.azurewebsites.net/api/Search/GetOccupationalTitles"
- //   });
-//};
+getTitles = function () {
+    return $.ajax({
+        url: "http://steminsightsapi.azurewebsites.net/api/search/getoccupationaltitles"
+    });
+};
 
-//getEducationalLevels = function () {
-//    return $.ajax({
-//       url: "http://steminsightsapi.azurewebsites.net/api/Search/GetEducationalLevels"
-//    });
-//};
+getEducationalLevels = function () {
+    return $.ajax({
+       url: "http://steminsightsapi.azurewebsites.net/api/Search/GetEducationalLevels"
+    });
+};
 
 
 var getJobTrends = function () {

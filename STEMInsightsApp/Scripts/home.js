@@ -1,28 +1,28 @@
 ﻿var init = function () {
     //console.log("JSON: ", dataWA);
     //getTitle pulls JSON data from wa.json file that's loaded in a script tag in Index.cshtml
-    getTitle();
-    function getTitle() {
+    //getTitle();
+    /*function getTitle() {
         var titlesUlContent = "";
         dataWA.forEach(function (element) {
             var li = "<option value=\"" + element.OCCTITLE + "\">" + element.OCCTITLE + "</option>";
             titlesUlContent += li;
         })
         $("#titlesUl").append(titlesUlContent);
-    };
+    };*/
 
 
-    /* getTitles().done(function (titles) {
+     getTitles().done(function (titles) {
         var titlesUlContent = "";
         titles.forEach(function (title) {
            var li = "<option value=\"" + title + "\">" + title + "</option>";
             titlesUlContent += li;
-         }); */
-    //    $("#titlesUl").append(titlesUlContent);
+         }); 
+        $("#titlesUl").append(titlesUlContent);
 
     //getEducationLevels();
 
- /*   getEducationLevel();
+  /*  getEducationLevel();
     function getEducationLevel() {
         var levelsUlContent = "";
         console.log("DATA", dataWA);
@@ -32,16 +32,16 @@
             levelsUlContent += li;
         })
         $("#levelsUl").append(levelsUlContent);
-    };
-    */
-/*
+    }; */
+    
+
        getEducationalLevels().done(function (levels) {
             var levelsUlContent = "";
             levels.forEach(function (level) {
                 var li = "<option value=\"" + level + "\">" + level + "</option>";
                 levelsUlContent += li;
             });
-           // $("#levelsUl").append(levelsUlContent);
+            $("#levelsUl").append(levelsUlContent);
         }).fail(function (error) {
             console.log("failed to get the levels");
         })
@@ -52,7 +52,7 @@
                 var li = "<option value=\"" + category + "\">" + category + "</option>";
                 categoriesUlContent += li;
             });
-            $("#categoriesUl").append(categoriesU1Content);
+            $("#categoriesUl").append(categoriesUlContent);
         }).fail(function (error) {
             console.log("ERROR", Object.keys(error));
             console.log("the error is", error.error, error.responseText);
@@ -72,9 +72,9 @@
             $("#searchResults").html(htmlResults);
         }).fail(function (error) { console.log("failed to call the search api: ", error); });
     });
-*/
 
-    $("#searchBtn").click(function (event) {
+
+ /*   $("#searchBtn").click(function (event) {
         console.log("heard a click");
         $('#spinner').show();
         var category = $("#categoriesUl").val();
@@ -89,7 +89,7 @@
         var htmlResults = renderResults(searchResult);
         $('#spinner').hide();
         $("#searchResults").html(htmlResults);
-    })
+    }) */
 
 }
 function renderResults(arr) {
@@ -112,8 +112,8 @@ function renderResults(arr) {
     }
 
     $.each(arr, function (index, data) {
-        var avg = data.AVGGRW1424;
-        //var avg = data.AverageAnnualGrowthRate;
+       // var avg = data.AVGGRW1424;
+        var avg = data.AverageAnnualGrowthRate;
         var avgN = parseFloat(avg);
         if (isNaN(avgN)) {
             avg = "";
@@ -127,6 +127,7 @@ function renderResults(arr) {
       //  DATA WAGECAT,EDCAT,RATING,STEMFLAG,SOC,OCCTITLE,AVGWAGE,50THPERWAGE,ANNMEDSAL,MEDHRLYWAGE,EDLEVEL,DD,INDUSTRY,
         // OCCCAT,ESTEMP2014,ESTEMP2024,JOBSADD1424,GROWTH1419,GROWTH1924,AVGGRW1424,ANNOPEN1419,ANNOPEN1924,ANNOPEN1424,ONET,county
       //  console.log("title: ", data.OCCTITLE);
+      /*
                                 + data.OCCCAT + '</td><td>'
                                 + data.OCCTITLE + '</td><td>'
                                 + data.ANNMEDSAL + '</td><td>'
@@ -138,7 +139,8 @@ function renderResults(arr) {
                                 + data.ESTEMP2014 + '</td><td>'
                                 + data.ESTEMP2024 + '</td>'
                                 + '</tr>';
-                            /* + data.JobTitle + '</td><td>'
+                                */
+                             + data.JobTitle + '</td><td>'
                              + data.OccupationalTitle + '</td><td>'
                              + data.AnnualMedianSalary + '</td><td>'
                              + data.MedianHourlyWage + '</td><td>'
@@ -148,7 +150,7 @@ function renderResults(arr) {
                              + data.AverageAnnualJobOpenings + '</td><td>'
                              + data.EstimatedEmployment2014 + '</td><td>'
                              + data.EstimatedEmployment2024 + '</td>'                        
-                             + '</tr>'; */
+                             + '</tr>'; 
     });
 
     result += "</table>";
