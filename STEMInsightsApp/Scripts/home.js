@@ -66,6 +66,7 @@
         var county = $("#regionUl").val();
         var title = $("#titlesUl").val();
         var level = $("#levelsUl").val();
+        var category = $("#categoriesUl").val();
         searchJobs(county, title, level).done(function (searchResults) {
             var htmlResults = renderResults(searchResults);
             $('#spinner').hide();
@@ -121,9 +122,9 @@ function renderResults(arr) {
             avgN = Math.round(avgN * 10000) / 100
             avg = avgN + "";
         }
-
+        console.log("DATA: ", data);
         result += '<tr><td>'
-       // console.log("DATA: ", data);
+       
       //  DATA WAGECAT,EDCAT,RATING,STEMFLAG,SOC,OCCTITLE,AVGWAGE,50THPERWAGE,ANNMEDSAL,MEDHRLYWAGE,EDLEVEL,DD,INDUSTRY,
         // OCCCAT,ESTEMP2014,ESTEMP2024,JOBSADD1424,GROWTH1419,GROWTH1924,AVGGRW1424,ANNOPEN1419,ANNOPEN1924,ANNOPEN1424,ONET,county
       //  console.log("title: ", data.OCCTITLE);
