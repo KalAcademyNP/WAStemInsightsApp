@@ -78,6 +78,7 @@ namespace STEMInsightsAPI.Controllers
             }
         }
 
+        [HttpGet]
         public IEnumerable<string> GetOccupationalTitles()
         {
             try
@@ -91,7 +92,7 @@ namespace STEMInsightsAPI.Controllers
             }
         }
 
-
+        [HttpGet]
         public IEnumerable<string> GetEducationalLevels()
         {
             try
@@ -106,6 +107,20 @@ namespace STEMInsightsAPI.Controllers
 
         }
 
+        [HttpGet]
+        public IEnumerable<string> GetJobCategories()
+        {
+            try
+            {
+                var db = new WAStemModel();
+                
+                return db.Database.SqlQuery<String>("sp_GetJobCategories");
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
         // POST: api/Search
         public void Post([FromBody]string value)
         {

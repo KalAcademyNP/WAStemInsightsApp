@@ -101,8 +101,8 @@
             </div>
         </div>
     </div>
-
-    <div "style="margin-top:30px; margin-left:100px; margin-bottom:50px; min-height:200px">
+    <!-- Search and result area -->
+    <div id="searchArea">
         
         <div id="searchInputs">
             <div id="jobCategoryDropdown" class="dropdown">
@@ -128,6 +128,15 @@
                 <div>
                     <select id="levelsUl" class="form-control">
                         <option value="">ALL</option>
+                        @*<option value="Bachelor's degree">Bachelor's degree</option>
+                        <option value="Doctoral or Professional degree">Doctoral or Professional degree</option>
+                        <option value="High school diploma or equivalent">High school diploma or equivalent</option>
+                        <option value="Some college, no degree">Some college, no degree</option>
+                        <option value="Postsecondary nondegree award">Postsecondary nondegree award</option>
+                        <option value="No formal educational credential">No formal educational credential</option>
+                        <option value="Apprenticeship">Apprenticeship</option>
+                        <option value="Master's degree">Master's degree</option>
+                        <option value="Associate's degree">Associate's degree</option>*@
                     </select>
                 </div>
             </div>
@@ -147,26 +156,18 @@
             </div>
 
             <div id="search" class="dropdown">
-                <button id="searchBtn" class="btn btn-success">Search<br></button>
-                <img id="spinner" src="~/Content/images/spinner.gif"  style="width:30px; height:30px" />
+                <button id="searchBtn" class="btn btn-success">Search</button>
+                <img id="spinner" src="~/Content/images/spinner.gif"/>
             </div>
 
-        <div id="searchResults" class="results">        
-            <table>
-                <tr id=“footerExport”>
-                    <td id=“exportexcel”><img src=“~/icons/xls.png” title=“Export to Excel” /></td>
-                    <td id=“exportpdf”><img src=“~/icons/pdf.png” title=“Export to PDF” /></td>
-                    <td id=“exportimage”><img src=“~/icons/png.png” title=“Export to PNG” /></td>
-                    <td id=“exportcsv”><img src=“~/icons/csv.png” title=“Export to CSV” /></td>
-                    <td id=“exportword”><img src=“~/icons/word.png” title=“Export to Word” /></td>
-                    <td id=“exporttxt”><img src=“~/icons/txt.png” title=“Export to TXT” /></td>
-                    <td id=“exportxml”><img src=“~/icons/xml.png” title=“Export to XML” /></td>
-                    <td id=“exportppt”><img src=“~/icons/ppt.png” title=“Export to PPT” /></td>
-                </tr>
-            </table>
-    </div>
+        </div>
 
-        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <div id="searchResults" class="results">        
+        </div>
+    </div>
+        <script src="~/Scripts/allCounties.json"></script>
+        <script src="~/Scripts/wa.json"></script>
+        <script src="~/Scripts/jquery-3.1.1.min.js"></script>
         <script src="~/Scripts/utilities.js"></script>
         <script src="~/Scripts/home.js"></script>
         <script src="~/Scripts/data_definition_modals.js"></script>

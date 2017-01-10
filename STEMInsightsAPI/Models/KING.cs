@@ -57,6 +57,10 @@ namespace STEMInsightsAPI.Models
         [StringLength(255)]
         public string INDUSTRY_SECTOR { get; set; }
 
+        [Column("OCCUPATIONAL CATEGORY")]
+        [StringLength(255)]
+        public string OCCUPATIONAL_CATEGORY { get; set; }
+
         [Column("ESTIMATED EMPLOYMENT 2014")]
         public double? ESTIMATED_EMPLOYMENT_2014 { get; set; }
 
@@ -66,28 +70,28 @@ namespace STEMInsightsAPI.Models
         [Column("TOTAL JOBS ADDED 2014-2024")]
         public double? TOTAL_JOBS_ADDED_2014_2024 { get; set; }
 
-        [Column("  Average annual growth rate 2014-2019")]
+        [Column("Average annual growth rate 2014-2019")]
         public double? C__Average_annual_growth_rate_2014_2019 { get; set; }
 
-        [Column("  Average annual growth rate 2019-2024")]
+        [Column("Average annual growth rate 2019-2024")]
         public double? C__Average_annual_growth_rate_2019_2024 { get; set; }
 
         [Column("AVERAGE ANNUAL GROWTH RATE 2014-2024")]
         public double? AVERAGE_ANNUAL_GROWTH_RATE_2014_2024 { get; set; }
 
-        [Column("  AVERAGE ANNUAL TOTAL OPENINGS  2014-2019")]
+        [Column("AVERAGE ANNUAL TOTAL OPENINGS  2014-2019")]
         public double? C__AVERAGE_ANNUAL_TOTAL_OPENINGS__2014_2019 { get; set; }
 
-        [Column("  AVERAGE ANNUAL TOTAL OPENINGS  2019-2024")]
+        [Column("AVERAGE ANNUAL TOTAL OPENINGS  2019-2024")]
         public double? C__AVERAGE_ANNUAL_TOTAL_OPENINGS__2019_2024 { get; set; }
 
         [Column("AVERAGE ANNUAL JOB  OPENINGS 2014-2024")]
         public double? AVERAGE_ANNUAL_JOB__OPENINGS_2014_2024 { get; set; }
 
-        [StringLength(255)]
-        public string F23 { get; set; }
+        //[StringLength(255)]
+        //public string F23 { get; set; }
 
-        [Column("ONET LINK: Provides Job Description, Samples of reported Job Tit")]
+        [Column("ONET LINK")]
         [StringLength(255)]
         public string ONET_LINK__Provides_Job_Description__Samples_of_reported_Job_Tit { get; set; }
     }
