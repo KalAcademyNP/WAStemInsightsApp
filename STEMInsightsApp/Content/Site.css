@@ -102,6 +102,18 @@ textarea {
     display: inline-block;
 }
 
+/**/
+   #activity { 
+        text-align:center;border:1px solid #ccc; 
+    } 
+    #activity td{ 
+        text-align:center;border:1px solid #ccc; 
+    } 
+     #footerExport td{ 
+       cursor:pointer; 
+       text-align:center;border:1px solid #ccc; 
+       border:none; 
+    } 
 
 /* Links inside the dropdown */
 .dropdown-content li {
@@ -168,4 +180,11 @@ textarea {
 .tbl-results {
     font-size:9pt;
     
+}
+/* MODALS */
+.modal-row {
+    margin: 1em auto;
+}
+.glyphicon {
+    cursor: pointer;
 }

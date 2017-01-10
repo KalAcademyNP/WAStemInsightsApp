@@ -5,7 +5,7 @@
 
 searchJobs = function (county, title, level) {
     var params = "";
-
+    //add job category here
     
     if (title != null) {
         params += "title=" + title;

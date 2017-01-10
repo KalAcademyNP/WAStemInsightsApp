@@ -38,30 +38,34 @@ function renderResults(arr) {
     
     var result = "<span style='font-size:9pt;color:#000000'>We found " + arr.length + " records!</span><br>";
     if (arr.length > 0) {
+  
         result += '<table class="table table-striped" style="font-size:8pt;color:#000000;" width="100%"><tr style="font-weight:bold;"><td>'
-                             + 'Job Title</td><td>'
-                             + 'Annual Median Salary($)</td><td>'
-                             + 'Median Hourly Wage($)</td><td>'
-                             + 'Entry Education Level</td><td>'
-                             + 'Total Jobs Added</td><td>'
+                             + 'Job Category </td><td>'
+                             + 'Job Title <span id="job-title" class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Annual Median Salary($) <span id="ams" class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Median Hourly Wage($) <span id="mhw" class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Entry Education Level <span id="eel" class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Total Jobs Added </td><td>'
                              + 'Average Annual Growth Rate(%)</td><td>'
-                             + 'Average Annual Job Openings</td><td>'
-                             + 'Estimated Employment 2014</td><td>'
-                             + 'Estimated Employment 2024</td>'
+                             + 'Average Annual Job Openings <span id="aajo"class="glyphicon glyphicon-question-sign"></span></td><td>'
+                             + 'Estimated Employment 2014 </td><td>'
+                             + 'Estimated Employment 2024 <span id="estimated-employment" class="glyphicon glyphicon-question-sign"></span></td>'
                              + '</tr>';
     }
 
     $.each(arr, function (index, data) {
-        var avg = data.AverageAnnualGrowthRate;    
+        var avg = data.AverageAnnualGrowthRate;
         var avgN = parseFloat(avg);
         if (isNaN(avgN)) {
             avg = "";
         } else {
             avgN = Math.round(avgN * 10000) / 100
             avg = avgN + "";
-        }    
+        }
 
         result += '<tr><td>'
+        //console.log("DATA", Object.keys(data));
+                             + data.JobTitle + '</td><td>'
                              + data.OccupationalTitle + '</td><td>'
                              + data.AnnualMedianSalary + '</td><td>'
                              + data.MedianHourlyWage + '</td><td>'

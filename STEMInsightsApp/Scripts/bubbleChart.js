@@ -95,7 +95,7 @@
         var result = "<span style='font-size:9pt;color:#000000'>We found " + arr.length + " records!</span><br>";
         if (arr.length > 0) {
             result += '<table class="table table-striped" style="font-size:8pt;color:#000000;" width="100%"><tr style="font-weight:bold;"><td>'
-                                 + 'Job Title</td><td>'
+                                 + 'Occupational Title</td><td>'
                                  + 'Annual Median Salary($)</td><td>'
                                  + 'Median Hourly Wage($)</td><td>'
                                  + 'Demand Status</td><td>'
@@ -148,7 +148,7 @@
                                  + 'Estimated Employment 2014</td><td>'
                                  + 'Estimated Employment 2024</td><td>'
                                  + 'Median Hourly Wage($)</td><td>'
-                                 + 'Job Title</td><td>'
+                                 + 'Occupational Title</td><td>'
                                  + 'Total Jobs Added</td><td>'
                                  + '</tr>';
         }
