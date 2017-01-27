@@ -12,9 +12,10 @@ body {
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
     background-color: #fff;
+    width:100%;
+    height: auto;
 }
 
 #searchArea {
@@ -22,13 +23,6 @@ body {
     min-height: 200px;
 }
 
-.searchBtn {
-    background-color: green;
-    height: 50px;
-    width: 100px;
-    color: white;
-    font-style: oblique;
-}
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -77,9 +71,7 @@ textarea {
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-    position: relative;
     display: inline-block;
-    margin-right: 30px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -154,6 +146,9 @@ textarea {
 .searchLabel {
     font-weight: bold;
     font-size: 10pt;
+}
+#search {
+    margin-top: 5px;
 }
 
 #spinner {
