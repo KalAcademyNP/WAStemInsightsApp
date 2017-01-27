@@ -1,16 +1,4 @@
 ﻿var init = function () {
-    //console.log("JSON: ", dataWA);
-    //getTitle pulls JSON data from wa.json file that's loaded in a script tag in Index.cshtml
-    //getTitle();
-    /*function getTitle() {
-        var titlesUlContent = "";
-        dataWA.forEach(function (element) {
-            var li = "<option value=\"" + element.OCCTITLE + "\">" + element.OCCTITLE + "</option>";
-            titlesUlContent += li;
-        })
-        $("#titlesUl").append(titlesUlContent);
-    };*/
-
 
      getTitles().done(function (titles) {
         var titlesUlContent = "";
@@ -20,21 +8,7 @@
          }); 
         $("#titlesUl").append(titlesUlContent);
 
-    //getEducationLevels();
-
-  /*  getEducationLevel();
-    function getEducationLevel() {
-        var levelsUlContent = "";
-        console.log("DATA", dataWA);
-        dataWA.forEach(function (element) {
-            console.log(element.EDLEVEL);
-            var li = "<option value=\"" + element.EDLEVEL + "\">" + element.EDLEVEL + "</option>";
-            levelsUlContent += li;
-        })
-        $("#levelsUl").append(levelsUlContent);
-    }; */
-    
-
+   
        getEducationalLevels().done(function (levels) {
             var levelsUlContent = "";
             levels.forEach(function (level) {
@@ -74,24 +48,6 @@
         }).fail(function (error) { console.log("failed to call the search api: ", error); });
     });
 
-
- /*   $("#searchBtn").click(function (event) {
-        console.log("heard a click");
-        $('#spinner').show();
-        var category = $("#categoriesUl").val();
-        var county = $("#regionUl").val();
-        var title = $("#titlesUl").val();
-        var level = $("#levelsUl").val();
-        console.log("level on click:", level)
-        var searchResult = searchJobWithCategory(category, county, title, level);
-        console.log("searchResult: ", searchJobWithCategory(category, county, title, level));
-        //var searchResult = searchJob(county, title, level);
-        //console.log("searchResult: ", searchJob(county, title, level));
-        var htmlResults = renderResults(searchResult);
-        $('#spinner').hide();
-        $("#searchResults").html(htmlResults);
-    }) */
-
 }
 function renderResults(arr) {
     
@@ -113,7 +69,6 @@ function renderResults(arr) {
     }
 
     $.each(arr, function (index, data) {
-       // var avg = data.AVGGRW1424;
         var avg = data.AverageAnnualGrowthRate;
         var avgN = parseFloat(avg);
         if (isNaN(avgN)) {
@@ -125,22 +80,6 @@ function renderResults(arr) {
         console.log("DATA: ", data);
         result += '<tr><td>'
        
-      //  DATA WAGECAT,EDCAT,RATING,STEMFLAG,SOC,OCCTITLE,AVGWAGE,50THPERWAGE,ANNMEDSAL,MEDHRLYWAGE,EDLEVEL,DD,INDUSTRY,
-        // OCCCAT,ESTEMP2014,ESTEMP2024,JOBSADD1424,GROWTH1419,GROWTH1924,AVGGRW1424,ANNOPEN1419,ANNOPEN1924,ANNOPEN1424,ONET,county
-      //  console.log("title: ", data.OCCTITLE);
-      /*
-                                + data.OCCCAT + '</td><td>'
-                                + data.OCCTITLE + '</td><td>'
-                                + data.ANNMEDSAL + '</td><td>'
-                                + data.MEDHRLYWAGE + '</td><td>'
-                                + data.EDLEVEL + '</td><td>'
-                                + data.JOBSADD1424 + '</td><td>'
-                                + avg + '</td><td>'
-                                + data.ANNOPEN1419 + '</td><td>'
-                                + data.ESTEMP2014 + '</td><td>'
-                                + data.ESTEMP2024 + '</td>'
-                                + '</tr>';
-                                */
                              + data.JobCategory + '</td><td>'
                              + data.OccupationalTitle + '</td><td>'
                              + data.AnnualMedianSalary + '</td><td>'
