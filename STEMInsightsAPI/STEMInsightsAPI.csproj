@@ -166,6 +166,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\STEMInsightsAPI - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\STEMInsightsAPI - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\STEMInsightsAPI.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -8,7 +8,7 @@ getEducationLevels = function () {
     return eduLevels;
 }
 
-searchJobs = function (county, title, level) {
+searchJobs = function (county, title, level, category) {
     var params = "";
     //add job category here
     
@@ -28,11 +28,11 @@ searchJobs = function (county, title, level) {
     } else {
         params += "&county=" + county;
     }
-    //if (category != null) {
-    //    params += "&category=" + category;
-    //} else {
-    //    params += "&category=";
-    //}
+    if (category != null) {
+        params += "&category=" + category;
+    } else {
+        params += "&category=";
+    }
 
     var url = "http://steminsightsapi.azurewebsites.net/api/Search/SearchJobDemands/?" + params;
     

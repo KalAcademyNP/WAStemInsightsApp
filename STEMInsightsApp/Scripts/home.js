@@ -67,7 +67,7 @@
         var title = $("#titlesUl").val();
         var level = $("#levelsUl").val();
         var category = $("#categoriesUl").val();
-        searchJobs(county, title, level).done(function (searchResults) {
+        searchJobs(county, title, level, category).done(function (searchResults) {
             var htmlResults = renderResults(searchResults);
             $('#spinner').hide();
             $("#searchResults").html(htmlResults);
@@ -141,7 +141,7 @@ function renderResults(arr) {
                                 + data.ESTEMP2024 + '</td>'
                                 + '</tr>';
                                 */
-                             + data.JobTitle + '</td><td>'
+                             + data.JobCategory + '</td><td>'
                              + data.OccupationalTitle + '</td><td>'
                              + data.AnnualMedianSalary + '</td><td>'
                              + data.MedianHourlyWage + '</td><td>'

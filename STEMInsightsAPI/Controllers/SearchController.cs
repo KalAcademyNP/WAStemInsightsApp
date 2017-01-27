@@ -14,7 +14,7 @@ namespace STEMInsightsAPI.Controllers
     {
         // GET: api/Search/5
         [HttpGet]
-        public IEnumerable<SearchResult> SearchJobDemands([FromUri] string title, [FromUri] string educationalLevel, [FromUri]string county)
+        public IEnumerable<SearchResult> SearchJobDemands([FromUri] string title, [FromUri] string educationalLevel, [FromUri]string county, [FromUri]string category)
         {
             try
             {
@@ -27,11 +27,16 @@ namespace STEMInsightsAPI.Controllers
                     educationalLevel = "";
                 else
                     educationalLevel = educationalLevel.Replace("'", "''");
+                if (string.IsNullOrEmpty(category))
+                    category = "";
+                else
+                    category = category.Replace("'", "''");
 
                 var titleParam = new SqlParameter("@title", title);
                 var educationalLevelParam = new SqlParameter("@educationalLevel", educationalLevel);
                 var countyParam = new SqlParameter("@county", county);
-                return db.Database.SqlQuery<SearchResult>("sp_SearchForDemand @title, @educationalLevel, @county", titleParam, educationalLevelParam, countyParam);
+                var categoryParam = new SqlParameter("@category", category);
+                return db.Database.SqlQuery<SearchResult>("sp_SearchForDemand @title, @educationalLevel, @county, @category", titleParam, educationalLevelParam, countyParam, categoryParam);
 
             }
             catch (Exception)
