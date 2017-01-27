@@ -206,7 +206,6 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\scatterplot.js" />
     <Content Include="Scripts\utilities.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -225,8 +224,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
-    <Content Include="Scripts\wa.json" />
-    <Content Include="Scripts\scatterPlot.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
